@@ -93,5 +93,13 @@ ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV TEST_DEBUG=0
 
+COPY Makefile /root/lightning-integration/Makefile
+
+RUN make src/eclair bin/eclair.jar
+RUN make src/ptarmigan bin/ptarmd
+RUN make src/lightning bin/lightningd
+RUN make src/lnd bin/lnd
+
 COPY . /root/lightning-integration/
+
 CMD ["make", "update", "clients", "test"]
