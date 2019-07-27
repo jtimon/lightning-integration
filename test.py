@@ -21,7 +21,8 @@ import sys
 import tempfile
 import time
 
-impls = [EclairNode, LightningNode, LndNode, PtarmNode]
+# impls = [EclairNode, LightningNode, LndNode, PtarmNode]
+impls = [PtarmNode]
 
 if TEST_DEBUG:
     logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)

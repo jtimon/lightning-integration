@@ -61,7 +61,8 @@ clean:
 	cd src/eclair; mvn clean
 	cd src/ptarmigan; make distclean
 
-clients: bin/lightningd bin/lnd bin/eclair.jar bin/ptarmd
+# clients: bin/lightningd bin/lnd bin/eclair.jar bin/ptarmd
+clients: bin/ptarmd
 
 test: clients
 	# Failure is always an option
