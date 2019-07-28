@@ -4,5 +4,4 @@ services: docker
 install:
   - docker build --tag=lnintegration .
 script:
-  - docker run --name lnintegration lnintegration > log.txt ; echo $? > result.txt
-  - echo "result: " && cat result.txt
+  - docker run --name lnintegration lnintegration > log.txt ; echo $? > result.txt ; echo "result: " && cat result.txt
