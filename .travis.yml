@@ -3,6 +3,5 @@ services: docker
 
 install:
   - docker build --tag=lnintegration .
-  - docker run -d --name lnintegration lnintegration
 script:
-  - docker ps | grep -q lnintegration
+  - docker run --name lnintegration lnintegration
