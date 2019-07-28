@@ -3,6 +3,6 @@ services: docker
 
 install:
   - docker build --tag=lnintegration .
-  - docker run --name lnintegration lnintegration > log.txt ; echo $? > result.txt
 script:
+  - docker run --name lnintegration lnintegration > log.txt ; echo $? > result.txt
   - echo "result: " && cat result.txt
