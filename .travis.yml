@@ -1,5 +1,8 @@
 language: bash
 services: docker
 
+install:
+  - docker build --tag=lnintegration .
+  - docker run -d --name lnintegration lnintegration
 script:
-  - docker build --tag=lnintegration . && docker run lnintegration
+  - docker ps | grep -q lnintegration
