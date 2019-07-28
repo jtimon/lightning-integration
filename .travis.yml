@@ -3,5 +3,6 @@ services: docker
 
 install:
   - docker build --tag=lnintegration .
-script:
   - docker run --name lnintegration lnintegration
+script:
+  - echo "Success"
